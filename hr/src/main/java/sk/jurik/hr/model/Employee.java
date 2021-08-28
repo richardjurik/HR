@@ -34,6 +34,10 @@ public class Employee {
         return person;
     }
 
+    /**
+     * Set Person
+     * @param person object Person
+     */
     public void setPerson(Person person) {
         this.person = person;
     }

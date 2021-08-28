@@ -24,6 +24,9 @@ public class Employee {
     @JoinColumn(name = "department_id")
     private Department department;
 
+    /**
+     * Employee constructor
+     */
     public Employee() {
     }
 

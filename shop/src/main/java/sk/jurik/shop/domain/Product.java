@@ -101,7 +101,7 @@ public class Product {
         if (this == o) return true;
         if (!(o instanceof Product)) return false;
         Product product = (Product) o;
-        return getMerchantId() == product.getMerchantId() && Double.compare(product.getPrice(), getPrice()) == 0 && getAvailable() == product.getAvailable() && Objects.equals(getId(), product.getId()) && getName().equals(product.getName()) && getDescription().equals(product.getDescription()) && getCreatedAt().equals(product.getCreatedAt());
+        return getMerchantId() == product.getMerchantId() && Double.compare(product.getPrice(), getPrice()) == 0 && getAvailable() == product.getAvailable() && Objects.equals(getId(), product.getId()) && getName().equals(product.getName()) && getDescription().equals(product.getDescription()) && getCreatedAt().getTime() == product.getCreatedAt().getTime();
     }
 
     @Override

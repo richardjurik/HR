@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.event.annotation.BeforeTestClass;
 import sk.jurik.shop.db.services.api.CustomerService;
 import sk.jurik.shop.db.services.api.MerchantService;
@@ -17,6 +18,7 @@ import sk.jurik.shop.domain.Product;
 import java.util.List;
 
 @SpringBootTest
+@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
 public class DBServiceTests {
 
     @Autowired

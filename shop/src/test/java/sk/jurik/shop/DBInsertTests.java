@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.test.annotation.DirtiesContext;
 import sk.jurik.shop.domain.Customer;
 import sk.jurik.shop.domain.Merchant;
 import sk.jurik.shop.domain.Product;
@@ -16,6 +17,7 @@ import java.sql.Timestamp;
 import java.time.Instant;
 
 @SpringBootTest
+@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
 public class DBInsertTests {
 
     private final String insertCustomer = "INSERT INTO customer(name, surname, email, address, age, phone_number) values(?, ?, ?, ?, ?, ?)";

@@ -19,4 +19,6 @@ public interface ProductService {
     void deleteProduct(int id);
 
     void updateProduct(int id, UpdateProductRequest request);
+
+    void updateAvailableInternal(int id, int newAvailable);
 }

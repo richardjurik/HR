@@ -1,11 +1,13 @@
 package sk.jurik.shop.db.services.impl;
 
+import org.springframework.stereotype.Service;
 import sk.jurik.shop.db.repositories.MerchantRepository;
 import sk.jurik.shop.db.services.api.MerchantService;
 import sk.jurik.shop.domain.Merchant;
 
 import java.util.List;
 
+@Service
 public class MerchantServiceImpl implements MerchantService {
 
     private final MerchantRepository merchantRepository;

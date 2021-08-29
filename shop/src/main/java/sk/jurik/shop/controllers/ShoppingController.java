@@ -20,7 +20,7 @@ public class ShoppingController {
         this.shoppingService = shoppingService;
     }
 
-    @PostMapping
+    @PostMapping("/buy")
     public ResponseEntity buy(@RequestBody BuyProductRequest request){
         BuyProductResponse buyProductResponse = shoppingService.buyProduct(request);
         if (buyProductResponse.isSuccess()) {
